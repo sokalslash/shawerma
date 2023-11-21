@@ -6,14 +6,24 @@ import { store } from '../api/store.js';
 const QUANTITY_MISSING = 0;
 
 const order = {
+  _basket: {},
   _sum: 0,
   _amountGoods: 0,
   _goods: {},
 
+  _getStore() {
+    this._basket = store.getItems();
+  },
+
+  _setStore() {
+
+  },
+
   _addGoodsToOrder(productObject, productId) {
-    this._goods[productId] = Object.assign({}, productObject);
-    this._goods[productId].count++;
-    console.log('товар только что был добавлен в объект this._goods');
+    this._basket.goods[productId] = Object.assign({}, productObject);
+    console.log('ты хотела посмотеть как это выглядит', this._basket.goods[productId])
+    this._basket.goods[productId].count++;
+    console.log('товар только что был добавлен в объект this._basket.goods', this._basket.goods);
   },
   
   _getGoodsForMessage() {
@@ -36,20 +46,28 @@ const order = {
   },
 
   plusGoods(productId, menuItemId, callback) {
-    this._amountGoods ++;
-    if (!this._goods[productId]) {
+    this._getStore();
+    if (!this._basket.hasOwnProperty('goods')) {
+      console.log('отработала первая ветка', Boolean(this._basket));
+      this._basket.amountGoods = 0;
+      this._basket.sumGoods = 0;
+      this._basket.goods = {};
+      
+      this._basket.amountGoods ++;
       this._addGoodsToOrder(menu[menuItemId][productId], productId);
-      this._sum += this._goods[productId].price;
-      renderViewBasketMajor(menuItemId, productId, this._goods[productId].count, this._amountGoods, this._sum);
+      this._basket.sumGoods += this._basket.goods[productId].price;
+      renderViewBasketMajor(menuItemId, productId, this._basket.goods[productId].count, this._basket);
     } else {
-      this._goods[productId].count++;
-      this._sum += this._goods[productId].price;
-      renderViewBasketMinor(productId, this._goods[productId].count, this._amountGoods, this._sum);
-      console.log('товар был уже в объект this._goods, мы увеличили его количество');
-    };
+      console.log('отработала вторая ветка');
+      this._basket.amountGoods ++;
+      this._basket.goods[productId].count++;
+      this._basket.sumGoods += this._basket.goods[productId].price;
+      renderViewBasketMinor(productId, this._basket.goods[productId].count, this._basket);
+      console.log('товар был уже в объект this._basket.goods, мы увеличили его количество');
+    }
     
-    
-    callback(menuItemId, productId, this._goods[productId].count);
+    callback(menuItemId, productId, this._basket.goods[productId].count);
+    store.setItems(this._basket);
   },
 
   minusGoods(productId, menuItemId, callback) {
@@ -82,7 +100,7 @@ const order = {
   },
 
   getGoodsObject(productId) {
-    return this._goods[productId];
+    return this._basket.goods[productId];
   },
 
   isGoodsInBasket() {

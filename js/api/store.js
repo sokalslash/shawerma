@@ -3,7 +3,7 @@ const store = {
   storage: window.localStorage,
 
   getItems() {
-    return JSON.parse(this.storage.getItem(storeKey) || {});
+    return JSON.parse(this.storage.getItem(this.storeKey)) || {};
   },
 
   setItems(items) {

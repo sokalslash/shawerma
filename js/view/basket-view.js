@@ -56,7 +56,7 @@ function updateSumBasket(sum) {
 }
 
 function updateViewBasket(productId, count, amountGoods, sumGoods, newItem) {
-  console.log('обновили view корзины');
+  console.log('обновили view корзины', 'sumGoods = ', sumGoods, 'amountGoods = ', amountGoods);
   updateBadges(amountGoods);
   updateSumBasket(sumGoods);
 

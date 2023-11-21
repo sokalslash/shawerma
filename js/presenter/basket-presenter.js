@@ -4,12 +4,12 @@ import { renderGoodsInBasket } from '../view/goods-template.js';
 import { updateViewBasket } from '../view/basket-view.js';
 import { handleGoodsCardChange } from './page-presenter.js';
 
-function renderViewBasketMajor(menuItemId, productId, count, amountGoods, sumGoods) {
-  const newBasketItem = renderBasketItem(menuItemId, productId, handleGoodsCardChange);
+function renderViewBasketMajor(menuItemId, productId, count, { amountGoods, sumGoods, goods }) {
+  const newBasketItem = renderGoodsInBasket(goods[productId], productId, menuItemId, handleGoodsCardChange);
   updateViewBasket(productId, count, amountGoods, sumGoods, newBasketItem);
 }
 
-function renderViewBasketMinor(productId, count, amountGoods, sumGoods) {
+function renderViewBasketMinor(productId, count, { amountGoods, sumGoods }) {
   updateViewBasket(productId, count, amountGoods, sumGoods);
 }
 
@@ -27,10 +27,4 @@ function handleSendOrder(evt, resetScreen) {
 
 }
 
-function renderBasketItem(menuItemId, productId, eventHendler) {
-  const productObject = order.getGoodsObject(productId);
-  const newBasketItem = renderGoodsInBasket(productObject, productId, menuItemId, eventHendler);
-  return newBasketItem;
-}
-
-export { checkGoodsInBasket, handleSendOrder, renderBasketItem, renderViewBasketMajor, renderViewBasketMinor };
+export { checkGoodsInBasket, handleSendOrder, renderViewBasketMajor, renderViewBasketMinor };
