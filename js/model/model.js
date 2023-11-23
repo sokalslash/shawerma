@@ -71,22 +71,24 @@ const order = {
   },
 
   minusGoods(productId, menuItemId, callback) {
-    if (this._goods[productId]) {
-      this._goods[productId].count--;
-      this._amountGoods --;
-      this._sum -= this._goods[productId].price;
-      if (this._goods[productId].count === QUANTITY_MISSING) {
+    this._getStore();
+    if (this._basket.hasOwnProperty('amountGoods')) {
+      this._basket.goods[productId].count--;
+      this._basket.amountGoods --;
+      this._basket.sumGoods -= this._basket.goods[productId].price;
+      if (this._basket.goods[productId].count === QUANTITY_MISSING) {
         
-        console.log('this._goods', this._goods, 'menu', menu);
-        renderViewBasketMinor(productId, this._goods[productId].count, this._amountGoods, this._sum);
-        delete this._goods[productId];
+        console.log('товар был в корзине, его уменьшили до 0', this._basket.goods[productId]);
+        renderViewBasketMinor(productId, this._basket.goods[productId].count, this._basket);
+        delete this._basket.goods[productId];
         callback(menuItemId, productId, QUANTITY_MISSING);
       } else {
-        renderViewBasketMinor(productId, this._goods[productId].count, this._amountGoods, this._sum);
-        callback(menuItemId, productId, this._goods[productId].count);
-        console.log('this._goods', this._goods, 'menu', menu);
+        renderViewBasketMinor(productId, this._basket.goods[productId].count, this._basket);
+        callback(menuItemId, productId, this._basket.goods[productId].count);
+        console.log('товар был в корзине, его уменьшили', this._basket.goods[productId]);
       }
     }
+    store.setItems(this._basket);
   },
 
   getData(productId, menuItemId, callback) {
