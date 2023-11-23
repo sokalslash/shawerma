@@ -49,7 +49,6 @@ const order = {
     this._getStore();
     if (!this._basket.hasOwnProperty('amountGoods')) {
       console.log('отработала первая ветка', this._basket);
-      console.trace();
       this._basket.amountGoods = 0;
       this._basket.sumGoods = 0;
       this._basket.goods = {};

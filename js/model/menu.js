@@ -542,7 +542,7 @@ const menu = {
       price: 3.5,
       count: 0
     },
-    HotChocolate: {
+    hotChocolate: {
       name: 'Горячий шоколад',
       type: '',
       size: '',
