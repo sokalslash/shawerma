@@ -93,10 +93,6 @@ const order = {
     }
   },
 
-  getGoodsObject(productId) {
-    return this._basket.goods[productId];
-  },
-
   isGoodsInBasket() {
     console.log('запущена проверка товаров в корзине order.isGoodsInBasket, сейчас в корзине находится', Object.keys(this._goods))
     return Object.keys(this._goods).length;
