@@ -16,7 +16,7 @@ const order = {
   },
 
   _setStore() {
-
+    store.setItems(this._basket);
   },
 
   _addGoodsToOrder(productObject, productId) {
@@ -47,15 +47,7 @@ const order = {
 
   plusGoods(productId, menuItemId, callback) {
     this._getStore();
-    if (!this._basket.hasOwnProperty('amountGoods')) {
-      console.log('отработала первая ветка', this._basket);
-      this._basket.amountGoods = 0;
-      this._basket.sumGoods = 0;
-      this._basket.goods = {};
-    }
-
-    this._basket.amountGoods ++;
-
+    this._basket.amountGoods++;
     if (this._basket.goods[productId]) {
       this._basket.goods[productId].count++;
       this._basket.sumGoods += this._basket.goods[productId].price;
@@ -65,14 +57,13 @@ const order = {
       this._basket.sumGoods += this._basket.goods[productId].price;
       renderViewBasketMajor(menuItemId, productId, this._basket.goods[productId].count, this._basket);
     }
-    
     callback(menuItemId, productId, this._basket.goods[productId].count);
-    store.setItems(this._basket);
+    this._setStore();
   },
 
   minusGoods(productId, menuItemId, callback) {
     this._getStore();
-    if (this._basket.hasOwnProperty('amountGoods')) {
+    if (this._basket.goods[productId]) {
       this._basket.goods[productId].count--;
       this._basket.amountGoods --;
       this._basket.sumGoods -= this._basket.goods[productId].price;
@@ -88,13 +79,14 @@ const order = {
         console.log('товар был в корзине, его уменьшили', this._basket.goods[productId]);
       }
     }
-    store.setItems(this._basket);
+    this._setStore();
   },
 
   getData(productId, menuItemId, callback) {
-    if (this._goods[productId]) {
-      callback(menuItemId, productId, this._goods[productId].count);
-      console.log('this._goods', this._goods, 'menu', menu);
+    this._getStore();
+    if (this._basket.goods[productId]) {
+      callback(menuItemId, productId, this._basket.goods[productId].count);
+      console.log('привет из model: было изменение на карточке шаурмы, положительное количество');
     } else {
       callback(menuItemId, productId, QUANTITY_MISSING);
       console.log('привет из model: было изменение на карточке шаурмы, количество ноль');
