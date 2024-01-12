@@ -4,12 +4,14 @@ import { renderViewBasketMajor, renderViewBasketMinor } from '../presenter/baske
 import { store } from '../api/store.js';
 
 const QUANTITY_MISSING = 0;
+const EMPTY_BASKET = {
+  amountGoods: 0,
+  sumGoods: 0,
+  goods: {}
+}
 
 const order = {
   _basket: {},
-  _sum: 0,
-  _amountGoods: 0,
-  _goods: {},
 
   _getStore() {
     this._basket = store.getItems();
@@ -17,6 +19,11 @@ const order = {
 
   _setStore() {
     store.setItems(this._basket);
+  },
+
+  _clearStore() {
+    this._basket = EMPTY_BASKET;
+    this._setStore();
   },
 
   _addGoodsToOrder(productObject, productId) {
@@ -29,20 +36,18 @@ const order = {
   _getGoodsForMessage() {
     console.log('работает getGoodsForMessage из model, делаем из объекта с товарами сообщение');
     const orderContentArray = [];
-    for (let prop in this._goods) {
+    for (let prop in this._basket.goods) {
       console.log('в объекте с товарами вот такие ключи prop', prop);
-      orderContentArray.push(`${ this._goods[prop].name } ${ this._goods[prop].type ? this._goods[prop].type : '' } ${ this._goods[prop].size ? this._goods[prop].size : '' } ${ this._goods[prop].price }руб. - ${ this._goods[prop].count } шт,\n`);
+      orderContentArray.push(`${ this._basket.goods[prop].name } ${ this._basket.goods[prop].type ?? '' } ${ this._basket.goods[prop].size ??'' } ${ this._basket.goods[prop].price }руб. - ${ this._basket.goods[prop].count } шт,\n`);
     }
     console.log('вот такое сообщение получиться', orderContentArray.join(''));
     return orderContentArray.join('');
   },
   
   _clearBasket(callback) {
-    this._sum = 0;
-    this._amountGoods = 0;
-    this._goods = {};
-    console.log('почистили корзину', this._sum, this._amountGoods, this._goods);
-    callback(this._sum, this._amountGoods);
+    this._clearStore();
+    console.log('почистили корзину', this._basket);
+    callback(this._basket.sumGoods, this._basket.amountGoods);
   },
 
   plusGoods(productId, menuItemId, callback) {
@@ -94,14 +99,14 @@ const order = {
   },
 
   isGoodsInBasket() {
-    console.log('запущена проверка товаров в корзине order.isGoodsInBasket, сейчас в корзине находится', Object.keys(this._goods))
-    return Object.keys(this._goods).length;
+    console.log('запущена проверка товаров в корзине order.isGoodsInBasket, сейчас в корзине находится', Object.keys(this._basket.goods))
+    return Object.keys(this._basket.goods).length;
   },
 
   sendOrder(evt, messageSuccess, messageError, resetScreen) {
     const formData = new FormData(evt.target);
     const products = this._getGoodsForMessage();
-    const message = `Заказ на имя <b>${ formData.get('name') }</b>\nтелефон ${ formData.get('prefix') + formData.get('tel') }\nготовность через ${ formData.get('time') } минут\n\nКоличество товара в заказе - <b>${ order._amountGoods }</b>:\n${ products }\nКомментарий: ${ formData.get('comment') }\n\nСумма заказа: ${ order._sum }руб.`;
+    const message = `Заказ на имя <b>${ formData.get('name') }</b>\nтелефон ${ formData.get('prefix') + formData.get('tel') }\nготовность через ${ formData.get('time') } минут\n\nКоличество товара в заказе - <b>${ this._basket.amountGoods }</b>:\n${ products }\nКомментарий: ${ formData.get('comment') }\n\nСумма заказа: ${ this._basket.sumGoods }руб.`;
     sendToTelegram(
       () => {
         messageSuccess(formData.get('name'), formData.get('time'));
