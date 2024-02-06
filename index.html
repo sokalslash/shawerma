@@ -63,42 +63,42 @@
             </button>
           </li>
         </ul>
-
-        <div class="basket-content hide">
-          <button class="basket-content__button button-close button" type="button">Свернуть козину</button>
-
-          <div class="basket-content__list"></div>
-          <p class="basket-content__sum">Сумма заказа: <span class="sum">0</span> руб.</p>
-          <button class="basket-content__button place-order-button button" type="button">Оформить предзаказ</button>
-          <form class="order-form hide" method="post" action="#">
-            <label class="order-form__label">Ваше имя:
-              <input class="order-form__input" name="name" type="text" required>
-            </label>
-            
-            <label class="order-form__label tel" for="tel">Ваш номер телефона:<br>
-              <input class="order-form__input phone-prefix" name="prefix" type="tel" value="+375" readonly>
-              <input class="order-form__input phone" id="tel" name="tel" type="tel" pattern="^[ 0-9]+$" minlength="9" maxlength="9" value="" required>
-            </label>
-
-            <label class="order-form__label">Укажите, через сколько минут Вы планируете забрать заказ
-              <select class="order-form__input" name="time">
-                <option value="15">15 мин</option>
-                <option value="20">20 мин</option>
-                <option value="25">25 мин</option>
-                <option value="30">30 мин</option>
-                <option value="35">35 мин</option>
-                <option value="40">40 мин</option>
-              </select>
-            </label>
-
-            <label class="order-form__label">Комментарий к заказу:
-              <textarea class="order-form__input comment" name="comment" rows="2" placeholder="если у Вас есть комментарий к заказу, можете указать его здесь"></textarea>
-            </label>
-
-            <button class="order-form__button-submit button" type="submit">Отправить предзаказ</button>
-          </form>
-        </div>
       </nav>
+
+      <div class="basket-content hide">
+        <button class="basket-content__button button-close button" type="button">Свернуть козину</button>
+
+        <div class="basket-content__list"></div>
+        <p class="basket-content__sum">Сумма заказа: <span class="sum">0</span> руб.</p>
+        <button class="basket-content__button place-order-button button" type="button">Оформить предзаказ</button>
+        <form class="order-form hide" method="post" action="#">
+          <label class="order-form__label">Ваше имя:
+            <input class="order-form__input" name="name" type="text" required>
+          </label>
+          
+          <label class="order-form__label tel" for="tel">Ваш номер телефона:<br>
+            <input class="order-form__input phone-prefix" name="prefix" type="tel" value="+375" readonly>
+            <input class="order-form__input phone" id="tel" name="tel" type="tel" pattern="^[ 0-9]+$" minlength="9" maxlength="9" value="" required>
+          </label>
+
+          <label class="order-form__label">Укажите, через сколько минут Вы планируете забрать заказ
+            <select class="order-form__input" name="time">
+              <option value="15">15 мин</option>
+              <option value="20">20 мин</option>
+              <option value="25">25 мин</option>
+              <option value="30">30 мин</option>
+              <option value="35">35 мин</option>
+              <option value="40">40 мин</option>
+            </select>
+          </label>
+
+          <label class="order-form__label">Комментарий к заказу:
+            <textarea class="order-form__input comment" name="comment" rows="2" placeholder="если у Вас есть комментарий к заказу, можете указать его здесь"></textarea>
+          </label>
+
+          <button class="order-form__button-submit button" type="submit">Отправить предзаказ</button>
+        </form>
+      </div>
     </div>
   </header>
 

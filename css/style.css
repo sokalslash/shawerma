@@ -149,6 +149,7 @@ a {
 }
 
 .header__wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -371,7 +372,7 @@ a {
 
 .basket-content {
   position: absolute;
-  top: 0;
+  top: 94px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -383,12 +384,6 @@ a {
   background-color: #F5F5F5;
   border-radius: 15px;
   box-shadow: 0 0 15px #6d6d6d;
-}
-
-@media (min-width: 780px) {
-  .basket-content {
-    top: 70px;
-  }
 }
 
 .basket-content__list {
