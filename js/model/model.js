@@ -1,6 +1,7 @@
 import { menu } from './menu.js';
 import { sendToTelegram } from '../api/api.js';
 import { renderViewBasketMajor, renderViewBasketMinor } from '../presenter/basket-presenter.js';
+import { updatedViewPageMajor } from '../presenter/page-presenter.js';
 import { store } from '../api/store.js';
 
 const QUANTITY_MISSING = 0;
@@ -26,8 +27,9 @@ const order = {
     this._setStore();
   },
 
-  _addGoodsToOrder(productObject, productId) {
-    this._basket.goods[productId] = Object.assign({}, productObject);
+  _addGoodsToOrder(productObject, productId, menuItemId) {
+    const productObjectWithFlagId = Object.assign({}, productObject, {menuId: menuItemId});
+    this._basket.goods[productId] = Object.assign({}, productObjectWithFlagId);
     console.log('ты хотела посмотеть как это выглядит', this._basket.goods[productId])
     this._basket.goods[productId].count++;
     console.log('товар только что был добавлен в объект this._basket.goods', this._basket.goods);
@@ -58,7 +60,7 @@ const order = {
       this._basket.sumGoods += this._basket.goods[productId].price;
       renderViewBasketMinor(productId, this._basket.goods[productId].count, this._basket);
     } else {
-      this._addGoodsToOrder(menu[menuItemId][productId], productId);
+      this._addGoodsToOrder(menu[menuItemId][productId], productId, menuItemId);
       this._basket.sumGoods += this._basket.goods[productId].price;
       renderViewBasketMajor(menuItemId, productId, this._basket.goods[productId].count, this._basket);
     }
@@ -116,9 +118,18 @@ const order = {
       messageError,
       message
     );
+  },
+
+  checkStore() {
+    this._getStore();
+    if (Object.keys(this._basket.goods).length !== 0) {
+      console.log(this._basket.goods);
+      for (let prop in this._basket.goods) {
+        updatedViewPageMajor(this._basket.goods[prop].menuId, prop, this._basket.goods[prop].count);
+        renderViewBasketMajor(this._basket.goods[prop].menuId, prop, this._basket.goods[prop].count, this._basket)
+      }
+    }
   }
 }
-
-
 
 export { order };

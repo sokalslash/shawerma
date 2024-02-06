@@ -1,6 +1,10 @@
 import { order } from '../model/model.js';
 import { updatedViewMajor, updatedViewMinor } from '../view/page-view.js';
 
+function updatedViewPageMajor(menuItemId, productId, count) {
+  updatedViewMajor(menuItemId, productId, count);
+}
+
 function handleGoodsCardChange(event, menuItemId, productId) {
   switch (event) {
     case 'shawarma__size':
@@ -16,4 +20,4 @@ function handleGoodsCardChange(event, menuItemId, productId) {
   }
 }
 
-export { handleGoodsCardChange };
+export { handleGoodsCardChange, updatedViewPageMajor };
