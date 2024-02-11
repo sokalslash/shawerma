@@ -522,7 +522,7 @@ a {
 .hello-screen {
   position: relative;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -535,7 +535,6 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* background-image: linear-gradient(360deg,#000000 1%,rgba(0,0,0,0.1) 100%); */
 }
 
 .hello-screen__description {
@@ -564,11 +563,6 @@ a {
 }
 
 @media (min-width: 780px) {
-  .hello-screen__blackout {
-    background-image: none;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-  }
-
   .hello-screen__title {
     font-size: 45px;
     line-height: 50px;
