@@ -527,8 +527,19 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url(../img/unop/hello-screen-bg.jpg);
+  background-image: url(../img/bg/hello-screen-bg-optim.jpg);
+}
 
+@media (min-width: 1200px) {
+  .hello-screen {
+    background-image: url(../img/bg/hello-screen-bg.jpg);
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hello-screen {
+    background-image: url(../img/bg/hello-screen-bg@2.jpg);
+  }
 }
 
 .hello-screen__blackout {
