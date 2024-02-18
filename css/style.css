@@ -771,7 +771,14 @@ a {
   .burgers {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../img/unop/burgers-bg.png);
+    background-image: url(../img/bg/burgers-bg.png);
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: 780px) {
+  .burgers {
+    background-image: url(../img/bg/burgers-bg@2.png);
+    background-size: 1450px auto;
   }
 }
 
