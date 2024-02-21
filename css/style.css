@@ -357,6 +357,11 @@ a {
   line-height: 50px;
   color: #d1caca;
   cursor: pointer;
+  transition: color 0.5s;
+}
+
+.nav__link:hover {
+  color: #FFFF99;
 }
 
 .nav__link::after {
@@ -367,7 +372,7 @@ a {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: #d1caca;
+  background-color: #FFFF99;
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
