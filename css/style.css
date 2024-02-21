@@ -367,7 +367,7 @@ a {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: #F3D900;
+  background-color: #d1caca;
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
@@ -393,7 +393,6 @@ a {
   /* border-radius: 50px;
   background-color: #FFFF99;
   color: #000; */
-  line-height: 25px;
   font-weight: 600;
 }
 
