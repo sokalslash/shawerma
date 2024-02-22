@@ -964,7 +964,7 @@ a {
   background-repeat: no-repeat;
   background-size: 25%;
   background-position: center;
-  background-image: url(../img/unop/Arrow.svg);
+  background-image: url(../img/arrow.svg);
 }
 
 .up-arrow.no-full {
@@ -1074,7 +1074,7 @@ a {
   height: 47px;
   margin-top: 30px;
   background-repeat: no-repeat;
-  background-image: url(../img/unop/instagram.png);
+  background-image: url(../img/instagram.png);
   background-position: center;
   border-radius: 10px;
   transition-duration: 0.3s;
