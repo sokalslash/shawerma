@@ -932,7 +932,7 @@ a {
   grid-column: 2/3;
 }
 
-.arrow-wrapper {
+/* .arrow-wrapper {
   position: sticky;
   top: 90%;
   left: 80%;
@@ -949,9 +949,13 @@ a {
   .arrow-wrapper {
     left: 90%;
   }
-}
+} */
 
 .up-arrow {
+  position: sticky;
+  top: 90%;
+  left: 80%;
+  z-index: 1;
   display: block;
   width: 60px;
   height: 60px;
@@ -961,6 +965,16 @@ a {
   background-size: 25%;
   background-position: center;
   background-image: url(../img/unop/Arrow.svg);
+}
+
+.up-arrow.no-full {
+  top: 75%;
+}
+
+@media (min-width: 720px) {
+  .up-arrow {
+    left: 90%;
+  }
 }
 
 .snacks__img {

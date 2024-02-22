@@ -1,7 +1,7 @@
 function animation() {
     gsap.registerPlugin(ScrollTrigger);
   
-    gsap.from('.arrow-wrapper', {
+    gsap.from('.up-arrow', {
       opacity: 0,
       y: -800,
       duration: 2,
