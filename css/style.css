@@ -175,6 +175,7 @@ a {
   padding: 0;
   width: 135px;
   border: none;
+  cursor: pointer;
 }
 
 .logo-button__img {
