@@ -431,9 +431,9 @@ a {
   font-size: 20px;
   font-weight: 600;
   line-height: 25px;
-  /* color: #000000; */
   background-color: #585656;
   border-radius: 15px;
+  transition: all 0.3s;
 }
 
 @media (min-width: 780px) {
@@ -444,7 +444,11 @@ a {
 
 .nav__basket-button:hover {
   color: #000000;
-  background-color: #F3D900;
+  background-color: #FFFF99;
+}
+
+.nav__basket-button:active {
+  opacity: 0.8;
 }
 
 .nav__button-wrapper {
