@@ -987,20 +987,30 @@ a {
   }
 }
 
-/* пересмотри стили */
-
 .footer__info {
   display: grid;
   justify-items: center;
   gap: 5px;
+  color: #d1caca;
+}
+
+.logo {
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.logo:active {
+  transform: scale(1);
+  opacity: 0.6;
 }
 
 .footer__address {
   font-size: 20px;
   font-weight: 600;
   line-height: 27px;
-  color: #9A8B8B;
-  letter-spacing: -0.1em;
 }
 
 .footer__pre-order {
@@ -1011,30 +1021,34 @@ a {
   font-weight: 800;
   font-size: 25px;
   line-height: 34px;
-  color: #998D8D;
+  color: #d1caca;
   transition-duration: 0.3s;
 }
 
-.footer__pre-order:hover {
-  /* box-shadow: 0 0 10px 5px #FFFF99; */
+.footer__pre-order:focus {
   color: #FFFF99;
 }
 
-.footer__pre-order:focus {
-  outline: 2px solid #FFFF99;
+.footer__pre-order:hover {
+  color: #FFFF99;
+  transform: scale(1.1);
+}
+
+.footer__pre-order:active {
+  transform: scale(1);
+  opacity: 0.6;
 }
 
 .footer__text {
   font-weight: 600;
-  font-size: 15px;
-  color: #998D8D;
-  letter-spacing: 0.43em;
+  letter-spacing: 6px;
   text-transform: uppercase;
 }
 
 .instagram-link-png {
   width: 50px;
   height: 47px;
+  margin-top: 30px;
   background-repeat: no-repeat;
   background-image: url(../img/unop/instagram.png);
   background-position: center;
@@ -1042,12 +1056,19 @@ a {
   transition-duration: 0.3s;
 }
 
-.instagram-link-png:hover {
-  box-shadow: 0 0 10px 5px #FFFF99;
+@media (min-width: 580px) {
+  .instagram-link-png {
+    margin-top: 0;
+  }
 }
 
-.instagram-link-png:focus {
-  outline: 2px solid #FFFF99;
+.instagram-link-png:hover {
+  transform: scale(1.2);
+}
+
+.instagram-link-png:active {
+  transform: scale(1);
+  opacity: 0.6;
 }
 
 @media (min-width: 780px) {
