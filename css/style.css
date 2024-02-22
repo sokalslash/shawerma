@@ -757,6 +757,15 @@ a {
   border: none;
   background-color: #EEEEEE;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.shawarma__size:hover {
+  transform: scale(1.1);
+}
+
+.shawarma__size:active {
+  transform: scale(1);
 }
 
 .shawarma__size--bright {
