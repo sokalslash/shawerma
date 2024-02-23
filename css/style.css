@@ -758,7 +758,7 @@ a {
   border: none;
   background-color: #EEEEEE;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.1s;
 }
 
 .shawarma__size:hover {
