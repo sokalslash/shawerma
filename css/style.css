@@ -710,7 +710,8 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
   justify-items: center;
-  gap: 20px;
+  row-gap: 50px;
+  column-gap: 20px;
 }
 
 .shawarma__item {
@@ -880,7 +881,8 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
   justify-items: center;
-  gap: 20px;
+  row-gap: 50px;
+  column-gap: 20px;
 }
 
 .menu-item {
