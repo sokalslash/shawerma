@@ -793,12 +793,20 @@ a {
   display: none;
 }
 
+.shawarma__item .into-basket-button {
+  align-self: end;
+}
+
 .main .plus-minus {
   grid-area: counter;
 }
 
 .main .plus-minus.hide {
   display: none;
+}
+
+.shawarma__item .plus-minus {
+  align-self: end;
 }
 
 .button-count {
