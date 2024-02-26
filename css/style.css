@@ -619,6 +619,7 @@ a {
   background-size: cover;
   background-position: center;
   background-image: url(../img/bg/hello-screen-bg-optim.jpg);
+  background-color: #000000;
 }
 
 @media (min-width: 1200px) {
