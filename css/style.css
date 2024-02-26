@@ -1041,6 +1041,10 @@ a {
   opacity: 0.6;
 }
 
+.footer__logo {
+  margin-top: 15px;
+}
+
 .footer__address {
   font-size: 20px;
   font-weight: 600;
