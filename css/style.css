@@ -1155,7 +1155,7 @@ a {
   width: 165px;
   height: 165px;
 
-  background-image: url("../img/unop/happy-smile.svg");
+  background-image: url("../img/happy-smile.svg");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -1163,11 +1163,11 @@ a {
 }
 
 .message__empty-basket::before {
-  background-image: url("../img/unop/worried-smile.svg");
+  background-image: url("../img/worried-smile.svg");
 }
 
 .message__error::before {
-  background-image: url("../img/unop/sad-smile.svg");
+  background-image: url("../img/sad-smile.svg");
 }
 
 .message-button {
