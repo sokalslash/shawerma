@@ -458,14 +458,15 @@ a {
 
 .basket-content {
   position: absolute;
-  top: 94px;
+  top: 80px;
   right: 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
   max-width: 370px;
-  max-height: 650px;
+  height: 650px;
+  max-height: 100vh;
   padding: 15px 0;
   z-index: 2;
   background-color: #F5F5F5;
