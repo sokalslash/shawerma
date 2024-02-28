@@ -465,8 +465,7 @@ a {
   gap: 15px;
   width: 100%;
   max-width: 370px;
-  height: 650px;
-  max-height: 100vh;
+  max-height: calc(100vh - 80px);
   padding: 15px 0;
   z-index: 2;
   background-color: #F5F5F5;
@@ -482,6 +481,16 @@ a {
   overflow-x: hidden;
   overflow-y: auto;
   box-shadow: 0 0 10px #cfc6c6 inset;
+}
+
+@media (max-height: 620px) {
+  .basket-content {
+    overflow: auto;
+  }
+
+  .basket-content__list {
+    min-height: 100px;
+  }
 }
 
 .basket-item {
