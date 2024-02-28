@@ -421,10 +421,9 @@ a {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.nav__basket-button {
+.basket-button {
   height: 45px;
   padding: 10px;
-  margin: 25px;
   font-size: 20px;
   font-weight: 600;
   line-height: 25px;
@@ -433,22 +432,26 @@ a {
   transition: all 0.3s;
 }
 
+.nav__basket-button {
+  margin: 25px;
+}
+
 @media (min-width: 780px) {
   .nav__basket-button {
     margin: 0;
   }
 }
 
-.nav__basket-button:hover {
+.basket-button:hover {
   color: #000000;
   background-color: #FFFF99;
 }
 
-.nav__basket-button:active {
+.basket-button:active {
   opacity: 0.8;
 }
 
-.nav__button-wrapper {
+.basket-button__wrapper {
   margin-right: 10px;
 }
 
