@@ -14,7 +14,7 @@ const placeOrderButtonEl = basketContentEl.querySelector('.place-order-button');
 const orderFormEl = basketContentEl.querySelector('.order-form');
 
 function closeBasketButtonClickHandler() {
-  basketContentEl.classList.add('hide');
+  basketContentEl.classList.add('header__basket-content--hidden');
   closeBasketButtonEl.removeEventListener('click', closeBasketButtonClickHandler);
 };
 
@@ -22,7 +22,7 @@ function placeOrderButtonClickHandler() {
   const isGoogsInBasket = checkGoodsInBasket();
   if (isGoogsInBasket) {
     console.log('код из handlers, isGoogsInBasket=', isGoogsInBasket);
-    placeOrderButtonEl.classList.add('hide');
+    placeOrderButtonEl.classList.add('place-order-button--hidden');
     placeOrderButtonEl.removeEventListener('click', placeOrderButtonClickHandler)
     orderFormEl.classList.remove('hide');
     orderFormEl.addEventListener('submit', orderFormSubmitHandler);
@@ -40,7 +40,7 @@ function orderFormSubmitHandler(e) {
 };
 
 basketButtonEl.addEventListener('click', () => {
-  basketContentEl.classList.remove('hide');
+  basketContentEl.classList.remove('header__basket-content--hidden');
   closeBasketButtonEl.addEventListener('click', closeBasketButtonClickHandler);
   placeOrderButtonEl.addEventListener('click', placeOrderButtonClickHandler)
 });
@@ -84,7 +84,7 @@ function cleanBasketView(sum, amountGoods) {
 function returnOriginalScreenState(sum, amountGoods) {
   orderFormEl.classList.add('hide');
   placeOrderButtonEl.classList.remove('hide');
-  basketContentEl.classList.add('hide');
+  basketContentEl.classList.add('header__basket-content--hidden');
 
   cleanBasketView(sum, amountGoods);
 

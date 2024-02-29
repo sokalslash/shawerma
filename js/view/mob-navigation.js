@@ -7,8 +7,8 @@ burgerBtn.addEventListener('click', () => {
   navMenu.classList.toggle('header__nav--active');
   burgerBtn.classList.toggle('active');
   body.classList.toggle('nav-menu-open');
-  if (!basketContent.classList.contains('hide')) {
-    basketContent.classList.add('hide')
+  if (!basketContent.classList.contains('header__basket-content--hidden')) {
+    basketContent.classList.add('header__basket-content--hidden')
   }
 })
 
