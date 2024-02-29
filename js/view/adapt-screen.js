@@ -10,11 +10,11 @@ function fix100vh() {
     let fullHeight = document.documentElement.clientHeight;
   
     if (fullHeight < 320) {
-      navList.classList.add('no-full');
+      navList.classList.add('nav__list--low-screen');
       arrowUp.classList.add('no-full')
     } else {
-      if (navList.classList.contains('no-full')) {
-        navList.classList.remove('no-full');
+      if (navList.classList.contains('nav__list--low-screen')) {
+        navList.classList.remove('nav__list--low-screen');
         arrowUp.classList.remove('no-full');
       }
     }
