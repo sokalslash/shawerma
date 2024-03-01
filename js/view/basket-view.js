@@ -82,8 +82,8 @@ function cleanBasketView(sum, amountGoods) {
 }
 
 function returnOriginalScreenState(sum, amountGoods) {
-  orderFormEl.classList.add('hide');
-  placeOrderButtonEl.classList.remove('hide');
+  orderFormEl.classList.add('order-form--hidden');
+  placeOrderButtonEl.classList.remove('place-order-button--hidden');
   basketContentEl.classList.add('header__basket-content--hidden');
 
   cleanBasketView(sum, amountGoods);
