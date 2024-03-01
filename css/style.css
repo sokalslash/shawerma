@@ -493,7 +493,7 @@ a {
   box-shadow: 0 0 10px #cfc6c6 inset;
 }
 
-@media (max-height: 620px) {
+@media (max-height: 720px) {
   .basket-content {
     overflow: auto;
   }
