@@ -9,7 +9,7 @@ const quantityBadgeBurgerEl = document.querySelector('.badge-burger');
 const quantityBadgeNavEl = document.querySelector('.badge-nav');
 
 const basketButtonEl = document.querySelector('.nav__basket-button');
-const closeBasketButtonEl = basketContentEl.querySelector('.button-close');
+const closeBasketButtonEl = basketContentEl.querySelector('.button-close-basket');
 const placeOrderButtonEl = basketContentEl.querySelector('.place-order-button');
 const orderFormEl = basketContentEl.querySelector('.order-form');
 
