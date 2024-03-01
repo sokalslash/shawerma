@@ -537,7 +537,11 @@ a {
   gap: 5px;
 }
 
-.basket-item .plus-minus {
+.plus-minus.hide {
+  display: none;
+}
+
+.basket-item__plus-minus {
   grid-area: buttons;
 }
 
@@ -799,9 +803,9 @@ a {
   grid-area: counter;
 }
 
-.main .plus-minus.hide {
+/* .main .plus-minus.hide {
   display: none;
-}
+} */
 
 .shawarma__item .plus-minus {
   align-self: end;
