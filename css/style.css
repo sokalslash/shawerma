@@ -567,7 +567,7 @@ a {
   font-size: 15px;
 }
 
-.order-form.hide {
+.order-form--hidden {
   display: none;
 }
 

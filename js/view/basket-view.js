@@ -24,7 +24,7 @@ function placeOrderButtonClickHandler() {
     console.log('код из handlers, isGoogsInBasket=', isGoogsInBasket);
     placeOrderButtonEl.classList.add('place-order-button--hidden');
     placeOrderButtonEl.removeEventListener('click', placeOrderButtonClickHandler)
-    orderFormEl.classList.remove('hide');
+    orderFormEl.classList.remove('order-form--hidden');
     orderFormEl.addEventListener('submit', orderFormSubmitHandler);
   }
 };
