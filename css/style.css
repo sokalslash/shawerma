@@ -530,7 +530,6 @@ a {
 }
 
 .plus-minus {
-  /* align-self: center; */
   display: flex;
   align-items: center;
   width: 110px;
@@ -607,7 +606,7 @@ a {
   height: 45px;
 }
 
-.main {
+.page__main {
   flex-grow: 1;
 }
 
@@ -694,18 +693,18 @@ a {
 
 /* Menu */
 
-.section-title {
+.section__title-wrapper {
+  margin-bottom: 30px;
+  padding-top: 50px;
+  border-bottom: 1px solid #68696A;
+}
+
+.section__title {
   margin-bottom: 17px;
   font-weight: 600;
   font-size: 25px;
   line-height: 34px;
   text-transform: uppercase;
-}
-
-.title-wrapper {
-  margin-bottom: 30px;
-  padding-top: 50px;
-  border-bottom: 1px solid #68696A;
 }
 
 .shawarma__list {
@@ -756,7 +755,6 @@ a {
   font-weight: 700;
   font-size: 17px;
   color: #5a5858;
-  /* color: #242424; */
   border: none;
   background-color: #EEEEEE;
   cursor: pointer;
@@ -787,27 +785,17 @@ a {
   text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
-.into-basket-button {
-  grid-area: button-basket;
-}
-
 .into-basket-button.hide {
   display: none;
 }
 
-.shawarma__item .into-basket-button {
+.shawarma__into-basket-button {
+  grid-area: button-basket;
   align-self: end;
 }
 
-.main .plus-minus {
+.shawarma__plus-minus {
   grid-area: counter;
-}
-
-/* .main .plus-minus.hide {
-  display: none;
-} */
-
-.shawarma__item .plus-minus {
   align-self: end;
 }
 
