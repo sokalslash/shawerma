@@ -966,7 +966,7 @@ a {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.footer-mt {
+.page__footer {
   margin-top: 10%;
 }
 
@@ -1048,7 +1048,7 @@ a {
   text-transform: uppercase;
 }
 
-.instagram-link-png {
+.instagram-link {
   width: 50px;
   height: 47px;
   margin-top: 30px;
@@ -1060,22 +1060,22 @@ a {
 }
 
 @media (min-width: 580px) {
-  .instagram-link-png {
+  .instagram-link {
     margin-top: 0;
   }
 }
 
-.instagram-link-png:hover {
+.instagram-link:hover {
   transform: scale(1.2);
 }
 
-.instagram-link-png:active {
+.instagram-link:active {
   transform: scale(1);
   opacity: 0.6;
 }
 
 @media (min-width: 780px) {
-  .instagram-link-png {
+  .instagram-link {
     position: static;
   }
 }
