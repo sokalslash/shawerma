@@ -1,5 +1,5 @@
 const navList = document.querySelector('.nav__list');
-const arrowUp = document.querySelector('.arrow-wrapper');
+const arrowUp = document.querySelector('.up-arrow');
 
 function fix100vh() {
     let vh = document.documentElement.clientHeight * 0.01;
