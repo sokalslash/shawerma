@@ -859,13 +859,13 @@ a {
   }
 }
 
-.burgers__type .plus-minus {
+.burgers__plus-minus {
   grid-column: 3/4;
   grid-row: 1/2;
   margin: 0 auto;
 }
 
-.burgers__type .into-basket-button {
+.burgers__into-basket-button {
   grid-column: 3/4;
   grid-row: 1/2;
 }
