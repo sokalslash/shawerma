@@ -899,7 +899,7 @@ a {
   border-radius: 10px;
 }
 
-.menu-description {
+.menu-item__description {
   grid-column: 1/3;
   font-weight: 300;
   font-size: 20px;
@@ -915,19 +915,19 @@ a {
   align-items: center;
 }
 
-.menu-type {
+.menu-item__type {
   grid-column: 1/2;
   font-weight: 700;
   text-align: center;
 }
 
-.menu-item .plus-minus {
+.menu-item__plus-minus {
   grid-area: unset;
   grid-column: 2/3;
   margin: 0 auto;
 }
 
-.menu-item .into-basket-button {
+.menu-item__into-basket-button {
   grid-area: unset;
   grid-column: 2/3;
 }
@@ -977,11 +977,7 @@ a {
   }
 }
 
-.snacks__img {
-  grid-column: 1/3;
-}
-
-.drinks__img {
+.menu-item__img {
   grid-column: 1/3;
 }
 
