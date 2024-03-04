@@ -215,13 +215,16 @@ a {
   object-fit: contain;
 }
 
-.toggle-wrapper {
+.burger-btn {
   position: relative;
+}
+
+.header__burger-btn {
   transform: translateY(15px);
 }
 
 @media (min-width: 780px) {
-  .toggle-wrapper {
+  .header__burger-btn {
     display: none;
   }
 }
