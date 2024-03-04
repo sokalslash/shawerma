@@ -10,7 +10,6 @@ const intoBasketElCollection = document.querySelectorAll('.into-basket-button');
 const plusMinusBlockElCollection = document.querySelectorAll('.plus-minus');
 
 function returnOriginalPageState() {
-  console.log('чистим страницу (корзина должна быть уже очищена)');
   goodsCountElCollection.forEach((el) => el.value = 0);
   intoBasketElCollection.forEach((el) => el.classList.remove('hide'));
   plusMinusBlockElCollection.forEach((el) => el.classList.add('hide'));
@@ -68,7 +67,6 @@ function updateViewGoodsCard(productId, count, cardEl) {
   } else if (count <= 0) {
     showButtonIntoBasket(intoBasketEl, plusMinusBlockEl);
   }
-  console.log('обновили view карточку соответствующую секцию товаров');
 }
 
 function updateViewShawarmaCard(productId, count, cardEl) {
@@ -83,12 +81,10 @@ function updateViewShawarmaCard(productId, count, cardEl) {
   } else if (activeTypeGoods.dataset.id === productId && count <= 0) {
     showButtonIntoBasket(intoBasketEl, plusMinusBlockEl);
   }
-  console.log('обновили view карточку соответствующей шаурмы');
 }
 
 function updatedViewMajor(menuItemId, productId, count) {
   const activeGoodsEl = document.querySelector(`#${menuItemId}`);
-  console.log('будем обновлять инфу на странице о товаре в корзине MAJOR');
 
   if (activeGoodsEl.classList.contains('shawarma__item')) {
     updateViewShawarmaCard(productId, count, activeGoodsEl);
@@ -99,7 +95,6 @@ function updatedViewMajor(menuItemId, productId, count) {
 
 function updatedViewMinor(menuItemId, productId, count) {
   const activeGoodsEl = document.querySelector(`#${menuItemId}`);
-  console.log('будем обновлять инфу на странице о товаре в корзине MINOR');
 
   updateViewShawarmaCard(productId, count, activeGoodsEl);
 }

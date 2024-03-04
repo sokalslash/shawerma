@@ -21,7 +21,6 @@ function closeBasketButtonClickHandler() {
 function placeOrderButtonClickHandler() {
   const isGoogsInBasket = checkGoodsInBasket();
   if (isGoogsInBasket) {
-    console.log('код из handlers, isGoogsInBasket=', isGoogsInBasket);
     placeOrderButtonEl.classList.add('place-order-button--hidden');
     placeOrderButtonEl.removeEventListener('click', placeOrderButtonClickHandler)
     orderFormEl.classList.remove('order-form--hidden');
@@ -48,7 +47,6 @@ basketButtonEl.addEventListener('click', () => {
 function updateBadges(amountGoods) {
   quantityBadgeBurgerEl.textContent = amountGoods;
   quantityBadgeNavEl.textContent = amountGoods;
-  console.log('обновили view бейджики');
 }
 
 function updateSumBasket(sum) {
@@ -56,7 +54,6 @@ function updateSumBasket(sum) {
 }
 
 function updateViewBasket(productId, count, amountGoods, sumGoods, newItem) {
-  console.log('обновили view корзины', 'sumGoods = ', sumGoods, 'amountGoods = ', amountGoods);
   updateBadges(amountGoods);
   updateSumBasket(sumGoods);
 

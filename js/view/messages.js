@@ -36,7 +36,6 @@ function messageClickHandler() {
 }
 
 function getMessageSuccess(buyerName, readyTime) {
-  console.log('работает message');
   messageSuccessSendData.querySelector('.success__buyer-name').textContent = buyerName;
   messageSuccessSendData.querySelector('.success__time').textContent = readyTime;
   document.body.append(messageSuccessSendData);
@@ -52,7 +51,6 @@ function getMessageError(error) {
 }
 
 function getMessageEmptyBasket() {
-  console.log('вообще-то корзина пуста, на экране должно было появиться сообщение');
   document.body.append(messageEmptyBasket);
   document.addEventListener('keydown', messageKeydownHandler);
   messageEmptyBasket.addEventListener('click', messageClickHandler);
