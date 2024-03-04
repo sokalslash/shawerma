@@ -47,10 +47,6 @@
   50% {
     transform: scale(1);
   }
-
-  /* 100% {
-    transform: scale(0.8);
-  } */
 }
 
 @keyframes showHello {
@@ -83,7 +79,6 @@ p {
 img {
   max-width: 100%;
   object-fit: cover;
-  /* height: auto;  ??????*/
 }
 
 a {
@@ -561,11 +556,6 @@ a {
   background-color: #585656;
 }
 
-.order-button {
-
-}
-
-/* подумать над внутренними отступами в basket-content margin or padding  */
 .order-form {
   display: grid;
   padding: 0 15px;
@@ -752,10 +742,6 @@ a {
       "text text text text"
       "counter counter button-basket button-basket";
   row-gap: 10px;
-
-  /* box-shadow: 0px 0px 5px 5px #C1C0C0;
-  border-radius: 10px;
-  padding: 8px; */
 }
 
 .shawarma__img {
@@ -915,10 +901,6 @@ a {
   grid-template-columns: repeat(2, 138px);
   grid-template-rows: 270px;
   gap: 10px;
-
-  /* box-shadow: 0px 0px 5px 5px #C1C0C0;
-  border-radius: 10px;
-  padding: 8px; */
 }
 
 .menu-img {
