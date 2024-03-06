@@ -1033,10 +1033,13 @@ a {
   text-transform: uppercase;
 }
 
+.footer__instagram-link {
+  margin-top: 30px;
+}
+
 .instagram-link {
   width: 50px;
   height: 47px;
-  margin-top: 30px;
   background-repeat: no-repeat;
   background-image: url(../img/instagram.png);
   background-position: center;
@@ -1045,7 +1048,7 @@ a {
 }
 
 @media (min-width: 580px) {
-  .instagram-link {
+  .footer__instagram-link {
     margin-top: 0;
   }
 }
@@ -1057,12 +1060,6 @@ a {
 .instagram-link:active {
   transform: scale(1);
   opacity: 0.6;
-}
-
-@media (min-width: 780px) {
-  .instagram-link {
-    position: static;
-  }
 }
 
 .success,
