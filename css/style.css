@@ -731,7 +731,7 @@ a {
 .shawarma__item {
   display: grid;
   grid-template-columns: repeat(4, 69px);
-  grid-template-rows: 270px 68px auto;
+  grid-template-rows: 270px auto auto;
   grid-template-areas:
       "img img img img"
       "price price price price"
@@ -752,12 +752,14 @@ a {
 
 .shawarma__description {
   grid-area: text;
+  align-items: center;
   font-size: 15px;
   color: #7A6F6F;
 }
 
 .shawarma__size {
   display: flex;
+  padding: 15px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
