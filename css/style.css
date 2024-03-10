@@ -135,7 +135,7 @@ a {
 
 @media (min-width: 780px) {
   .header {
-    height: 135px;
+    height: auto;
   }
 
   .header--hidden {
@@ -144,10 +144,6 @@ a {
 }
 
 @media (min-width: 1090px) {
-  .header {
-    height: 80px;
-  }
-
   .header--hidden {
     transform: translateY(-80px);
   }
