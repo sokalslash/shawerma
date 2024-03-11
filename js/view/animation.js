@@ -24,7 +24,7 @@ function animation() {
     })
 
     let mobileScreen = gsap.matchMedia();
-    mobileScreen.add('(min-width: 320px)', () => {
+    mobileScreen.add('(max-width: 590px)', () => {
 
       const shawarmaCardsCollection = document.querySelectorAll('.shawarma__item');
       shawarmaCardsCollection.forEach((card) => {
