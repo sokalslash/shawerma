@@ -26,38 +26,47 @@ function animation() {
     let mobileScreen = gsap.matchMedia();
     mobileScreen.add('(min-width: 320px)', () => {
 
-      gsap.from('.shawarma__item', {
-        opacity: 0,
-        yPercent: 100,
-        stagger: 0.8,
-        scrollTrigger: {
-          trigger: '.shawarma__list',
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
-          markers: true
-        }
+      const shawarmaCardsCollection = document.querySelectorAll('.shawarma__item');
+      shawarmaCardsCollection.forEach((card) => {
+        console.log(card);
+        gsap.from(card, {
+          opacity: 0,
+          yPercent: 100,
+          stagger: 0.8,
+          scrollTrigger: {
+            trigger: card,
+            start: '-=300 bottom',
+            toggleActions: 'play none none reverse'
+          }
+        })
       })
-  
-      gsap.from('.snacks__item', {
-        opacity: 0,
-        yPercent: 50,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: '.snacks__list',
-          start: 'top 80%',
-          toggleActions: 'play none none reverse'
-        }
+
+      const snacksCardsCollection = document.querySelectorAll('.snacks__item');
+      snacksCardsCollection.forEach((card) => {
+        gsap.from(card, {
+          opacity: 0,
+          yPercent: 100,
+          stagger: 0.8,
+          scrollTrigger: {
+            trigger: card,
+            start: '-=300 80%',
+            toggleActions: 'play none none reverse'
+          }
+        })
       })
-  
-      gsap.from('.drinks__item', {
-        opacity: 0,
-        yPercent: 50,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: '.drinks__list',
-          start: 'top 80%',
-          toggleActions: 'play none none reverse'
-        }
+
+      const drinksCardsCollection = document.querySelectorAll('.drinks__item');
+      drinksCardsCollection.forEach((card) => {
+        gsap.from(card, {
+          opacity: 0,
+          yPercent: 100,
+          stagger: 0.8,
+          scrollTrigger: {
+            trigger: card,
+            start: '-=300 80%',
+            toggleActions: 'play none none reverse'
+          }
+        })
       })
     })
 
@@ -72,8 +81,7 @@ function animation() {
         scrollTrigger: {
           trigger: '.shawarma__list',
           start: 'top 80%',
-          toggleActions: 'play none none reverse',
-          markers: true
+          toggleActions: 'play none none reverse'
         }
       })
   
