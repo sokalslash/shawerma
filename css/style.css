@@ -1,39 +1,47 @@
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Light'), local('OpenSans-Light'),
-      url('../fonts/OpenSans-Light.woff2') format('woff2'),
-      url('../fonts/OpenSans-Light.woff') format('woff');
+  font-family: "Open Sans";
+  src:
+    local("Open Sans Light"),
+    local("OpenSans-Light"),
+    url("../fonts/OpenSans-Light.woff2") format("woff2"),
+    url("../fonts/OpenSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-      url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-      url('../fonts/OpenSans-Regular.woff') format('woff');
-  font-weight: normal;
+  font-family: "Open Sans";
+  src:
+    local("Open Sans Regular"),
+    local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
-      url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
-      url('../fonts/OpenSans-SemiBold.woff') format('woff');
+  font-family: "Open Sans";
+  src:
+    local("Open Sans SemiBold"),
+    local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
-      url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'),
-      url('../fonts/OpenSans-ExtraBold.woff') format('woff');
-  font-weight: bold;
+  font-family: "Open Sans";
+  src:
+    local("Open Sans ExtraBold"),
+    local("OpenSans-ExtraBold"),
+    url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-ExtraBold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -106,10 +114,10 @@ a {
   flex-direction: column;
   min-height: 100%;
   margin: 0;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   line-height: 1.25;
   color: #000000;
-  background-color:  #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .body.nav-menu-open {
@@ -185,7 +193,7 @@ a {
 }
 
 @media (min-width: 780px) {
-   .logo-button__img {
+  .logo-button__img {
     bottom: -58px;
   }
 }
@@ -319,7 +327,7 @@ a {
     background-color: transparent;
     overflow: visible;
   }
-  
+
   .header__nav {
     position: relative;
     right: 0;
@@ -360,18 +368,18 @@ a {
 }
 
 .nav__link:hover {
-  color: #FFFF99;
+  color: #ffff99;
 }
 
 .nav__link::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 50%;
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: #FFFF99;
+  background-color: #ffff99;
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
@@ -400,7 +408,7 @@ a {
 .button {
   height: 32px;
   border: none;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   color: #ffffff;
   text-align: center;
@@ -443,7 +451,7 @@ a {
 
 .basket-button:hover {
   color: #000000;
-  background-color: #FFFF99;
+  background-color: #ffff99;
 }
 
 .basket-button:active {
@@ -469,7 +477,7 @@ a {
   max-width: 370px;
   max-height: 75vh;
   padding: 15px 0;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 15px;
   box-shadow: 0 0 15px #6d6d6d;
 }
@@ -499,14 +507,14 @@ a {
 
 .basket-item {
   display: grid;
-    grid-template-areas:
-        'caption caption'
-        'buttons cost';
-    gap: 10px;
-    align-items: center;
-    background-color: #eeeeee;
-    padding: 10px;
-    border-radius: 10px;
+  grid-template-areas:
+    "caption caption"
+    "buttons cost";
+  gap: 10px;
+  align-items: center;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .basket-item__title {
@@ -587,7 +595,7 @@ a {
 }
 
 .tel::after {
-  content: 'Пример: +375 298888888';
+  content: "Пример: +375 298888888";
   font-size: 0.8em;
 }
 
@@ -607,19 +615,19 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url(../img/bg/hello-screen-bg-optim.jpg);
+  background-image: url("../img/bg/hello-screen-bg-optim.jpg");
   background-color: #000000;
 }
 
 @media (min-width: 1200px) {
   .hello-screen {
-    background-image: url(../img/bg/hello-screen-bg.jpg);
+    background-image: url("../img/bg/hello-screen-bg.jpg");
   }
 }
 
 @media (min-resolution: 2dppx) and (min-width: 1200px) {
   .hello-screen {
-    background-image: url(../img/bg/hello-screen-bg@2.jpg);
+    background-image: url("../img/bg/hello-screen-bg@2.jpg");
   }
 }
 
@@ -693,7 +701,7 @@ a {
   background-repeat: no-repeat;
   background-size: 25%;
   background-position: center;
-  background-image: url(../img/arrow.svg);
+  background-image: url("../img/arrow.svg");
 }
 
 .up-arrow.no-full {
@@ -709,7 +717,7 @@ a {
 .section__title-wrapper {
   margin-bottom: 30px;
   padding-top: 50px;
-  border-bottom: 1px solid #68696A;
+  border-bottom: 1px solid #68696a;
 }
 
 .section__title {
@@ -733,10 +741,10 @@ a {
   grid-template-columns: repeat(4, 69px);
   grid-template-rows: 270px auto auto;
   grid-template-areas:
-      "img img img img"
-      "price price price price"
-      "text text text text"
-      "counter counter button-basket button-basket";
+    "img     img     img           img"
+    "price   price   price         price"
+    "text    text    text          text"
+    "counter counter button-basket button-basket";
   row-gap: 10px;
 }
 
@@ -754,7 +762,7 @@ a {
   grid-area: text;
   align-items: center;
   font-size: 15px;
-  color: #7A6F6F;
+  color: #7a6f6f;
 }
 
 .shawarma__size {
@@ -767,7 +775,7 @@ a {
   font-size: 17px;
   color: #5a5858;
   border: none;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   cursor: pointer;
   transition: transform 0.1s;
 }
@@ -782,8 +790,8 @@ a {
 
 .shawarma__size--bright {
   color: #000000;
-  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
-  background-color: #F3D900;
+  text-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+  background-color: #f3d900;
   border-radius: 0 0 0 30px;
 }
 
@@ -792,8 +800,8 @@ a {
 }
 
 .shawarma__size--bright .shawarma__price {
-  color: #FEFEFC;
-  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+  color: #fefefc;
+  text-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 .into-basket-button.hide {
@@ -827,13 +835,13 @@ a {
   .burgers {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../img/bg/burgers-bg.png);
+    background-image: url("../img/bg/burgers-bg.png");
   }
 }
 
 @media (min-resolution: 2dppx) and (min-width: 780px) {
   .burgers {
-    background-image: url(../img/bg/burgers-bg@2.png);
+    background-image: url("../img/bg/burgers-bg@2.png");
     background-size: 1450px auto;
   }
 }
@@ -883,7 +891,7 @@ a {
 
 .price {
   font-weight: 800;
-  color: #F4D903;
+  color: #f4d903;
 }
 
 .menu-list {
@@ -945,7 +953,7 @@ a {
 
 .footer {
   min-height: 113px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -1012,11 +1020,11 @@ a {
 }
 
 .footer__pre-order:focus {
-  color: #FFFF99;
+  color: #ffff99;
 }
 
 .footer__pre-order:hover {
-  color: #FFFF99;
+  color: #ffff99;
   transform: scale(1.1);
 }
 
@@ -1039,7 +1047,7 @@ a {
   width: 50px;
   height: 47px;
   background-repeat: no-repeat;
-  background-image: url(../img/instagram.png);
+  background-image: url("../img/instagram.png");
   background-position: center;
   border-radius: 10px;
   transition-duration: 0.3s;
@@ -1103,6 +1111,7 @@ a {
 .message__success::before {
   background-image: url("../img/happy-smile.svg");
 }
+
 .message__empty-basket::before {
   background-image: url("../img/worried-smile.svg");
 }
@@ -1117,7 +1126,7 @@ a {
   margin: 25px auto;
   font-size: 1.5em;
   font-weight: 700;
-  color: white;
+  color: #ffffff;
   border: 4px solid #cf1632;
   background-color: #cf1632;
   border-radius: 8px;
