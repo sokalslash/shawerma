@@ -28,7 +28,6 @@ function animation() {
 
       const shawarmaCardsCollection = document.querySelectorAll('.shawarma__item');
       shawarmaCardsCollection.forEach((card) => {
-        console.log(card);
         gsap.from(card, {
           opacity: 0,
           yPercent: 100,
