@@ -488,6 +488,12 @@ a {
   }
 }
 
+.header__basket-content--low-screen {
+  top: 10px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
 .basket-content {
   display: flex;
   flex-direction: column;
