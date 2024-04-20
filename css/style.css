@@ -782,6 +782,7 @@ a {
 }
 
 .shawarma__type {
+  height: 70px;
   grid-area: price;
   display: grid;
   grid-template-columns: repeat(4, 69px);
