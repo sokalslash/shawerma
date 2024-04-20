@@ -192,9 +192,13 @@ a {
   animation-timing-function: ease-out;
 }
 
-@media (min-width: 800px) {
-  .logo-button__img {
+@media (min-width: 800px ) and (max-width: 923px) {
+  .header--hidden .logo-button__img {
     bottom: -58px;
+  }
+
+  .logo-button__img {
+    bottom: -10px;
   }
 }
 
