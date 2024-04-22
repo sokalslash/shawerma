@@ -8,14 +8,14 @@ burgerBtn.addEventListener('click', () => {
   burgerBtn.classList.toggle('active');
   body.classList.toggle('nav-menu-open');
   if (!basketContent.classList.contains('header__basket-content--hidden')) {
-    basketContent.classList.add('header__basket-content--hidden')
+    basketContent.classList.add('header__basket-content--hidden');
   }
-})
+});
 
-navMenu.querySelectorAll('.nav__link').forEach(link => {
+navMenu.querySelectorAll('.nav__link').forEach((link) => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('header__nav--active');
     burgerBtn.classList.remove('active');
     body.classList.remove('nav-menu-open');
-  })
-})
+  });
+});

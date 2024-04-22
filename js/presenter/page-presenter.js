@@ -16,7 +16,6 @@ function handleGoodsCardChange(event, menuItemId, productId) {
       return;
     case 'minus':
       order.minusGoods(productId, menuItemId, updatedViewMajor);
-      return;
   }
 }
 

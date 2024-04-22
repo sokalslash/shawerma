@@ -9,7 +9,7 @@ const EMPTY_BASKET = {
   amountGoods: 0,
   sumGoods: 0,
   goods: {}
-}
+};
 
 const order = {
   _basket: {},
@@ -35,8 +35,8 @@ const order = {
 
   _getGoodsForMessage() {
     const orderContentArray = [];
-    for (let prop in this._basket.goods) {
-      orderContentArray.push(`${ this._basket.goods[prop].name } ${ this._basket.goods[prop].type ?? '' } ${ this._basket.goods[prop].size ??'' } ${ this._basket.goods[prop].price }руб. - ${ this._basket.goods[prop].count } шт,\n`);
+    for (const prop in this._basket.goods) {
+      orderContentArray.push(`${ this._basket.goods[prop].name } ${ this._basket.goods[prop].type ?? '' } ${ this._basket.goods[prop].size ?? '' } ${ this._basket.goods[prop].price }руб. - ${ this._basket.goods[prop].count } шт,\n`);
     }
     return orderContentArray.join('');
   },
@@ -111,12 +111,12 @@ const order = {
   checkStore() {
     this._getStore();
     if (Object.keys(this._basket.goods).length !== 0) {
-      for (let prop in this._basket.goods) {
+      for (const prop in this._basket.goods) {
         updatedViewPageMajor(this._basket.goods[prop].menuId, prop, this._basket.goods[prop].count);
-        renderViewBasketMajor(this._basket.goods[prop].menuId, prop, this._basket.goods[prop].count, this._basket)
+        renderViewBasketMajor(this._basket.goods[prop].menuId, prop, this._basket.goods[prop].count, this._basket);
       }
     }
   }
-}
+};
 
 export { order };

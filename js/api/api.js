@@ -8,10 +8,10 @@ function sendToTelegram(onSuccess, onFail, data) {
     parse_mode: 'html',
     text: data
   })
-  .then(() => {
-    onSuccess()
-  })
-  .catch((err) => onFail(err))
+    .then(() => {
+      onSuccess();
+    })
+    .catch((err) => onFail(err));
 }
 
 export { sendToTelegram };

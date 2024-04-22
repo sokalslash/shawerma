@@ -23,7 +23,7 @@ function checkGoodsInBasket() {
 }
 
 function handleSendOrder(evt, resetScreen) {
-  order.sendOrder(evt, getMessageSuccess, getMessageError, resetScreen)
+  order.sendOrder(evt, getMessageSuccess, getMessageError, resetScreen);
 
 }
 

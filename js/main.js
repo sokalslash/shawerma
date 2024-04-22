@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
     fix100vh();
     findHeight();
   });
-  window.addEventListener('scroll', () => addStickyHeader())
+  window.addEventListener('scroll', () => addStickyHeader());
 });
 
 order.checkStore();

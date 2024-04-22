@@ -431,7 +431,7 @@ const menu = {
       price: 10,
       count: 0
     },
-     baconBurger: {
+    baconBurger: {
       name: 'Бекон Бургер',
       type: '',
       size: '',
@@ -550,6 +550,6 @@ const menu = {
       count: 0
     },
   },
-}
+};
 
 export { menu };

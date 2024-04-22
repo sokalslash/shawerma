@@ -13,7 +13,7 @@ function returnOriginalPageState() {
   goodsCountElCollection.forEach((el) => el.value = 0);
   intoBasketElCollection.forEach((el) => el.classList.remove('hide'));
   plusMinusBlockElCollection.forEach((el) => el.classList.add('hide'));
-};
+}
 
 function goodsCardChangeHandler(event) {
   if (event.target.nodeName === 'BUTTON') {
@@ -34,10 +34,10 @@ function shawarmaCardChangeHandler(e) {
       handleGoodsCardChange(e.target.classList[0], e.currentTarget.id, chosenProduct.dataset.id);
     }
   }
-};
+}
 
 shawarmaCardsEl.forEach((item) => {
-  item.addEventListener('click', (e) => shawarmaCardChangeHandler(e))
+  item.addEventListener('click', (e) => shawarmaCardChangeHandler(e));
 });
 
 burgerSectionEl.addEventListener('click', (e) => goodsCardChangeHandler(e));

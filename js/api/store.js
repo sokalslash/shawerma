@@ -17,14 +17,14 @@ const store = {
   },
 
   setItem(key, value) {
-    const store = this.getItems();
+    const repository = this.getItems();
 
     this.storage.setItem(
       this.storeKey,
       JSON.stringify(
         Object.assign(
           {},
-          store,
+          repository,
           {
             [key]: value
           }
@@ -34,15 +34,15 @@ const store = {
   },
 
   removeItem(key) {
-    const store = this.getItems();
+    const repository = this.getItems();
 
-    delete store[key];
+    delete repository[key];
 
     this.storage.setItem(
       this.storeKey,
-      JSON.stringify(store)
+      JSON.stringify(repository)
     );
   }
-}
+};
 
 export { store };

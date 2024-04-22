@@ -16,17 +16,17 @@ const orderFormEl = basketContentEl.querySelector('.order-form');
 function closeBasketButtonClickHandler() {
   basketContentEl.classList.add('header__basket-content--hidden');
   closeBasketButtonEl.removeEventListener('click', closeBasketButtonClickHandler);
-};
+}
 
 function placeOrderButtonClickHandler() {
   const isGoogsInBasket = checkGoodsInBasket();
   if (isGoogsInBasket) {
     placeOrderButtonEl.classList.add('place-order-button--hidden');
-    placeOrderButtonEl.removeEventListener('click', placeOrderButtonClickHandler)
+    placeOrderButtonEl.removeEventListener('click', placeOrderButtonClickHandler);
     orderFormEl.classList.remove('order-form--hidden');
     orderFormEl.addEventListener('submit', orderFormSubmitHandler);
   }
-};
+}
 
 function orderFormSubmitHandler(e) {
   const isGoogsInBasket = checkGoodsInBasket();
@@ -36,12 +36,12 @@ function orderFormSubmitHandler(e) {
   } else {
     e.preventDefault();
   }
-};
+}
 
 basketButtonEl.addEventListener('click', () => {
   basketContentEl.classList.remove('header__basket-content--hidden');
   closeBasketButtonEl.addEventListener('click', closeBasketButtonClickHandler);
-  placeOrderButtonEl.addEventListener('click', placeOrderButtonClickHandler)
+  placeOrderButtonEl.addEventListener('click', placeOrderButtonClickHandler);
 });
 
 function updateBadges(amountGoods) {
