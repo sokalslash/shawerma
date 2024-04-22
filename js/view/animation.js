@@ -1,6 +1,6 @@
 function animation() {
     gsap.registerPlugin(ScrollTrigger);
-  
+
     gsap.from('.up-arrow', {
       opacity: 0,
       y: -800,
@@ -83,7 +83,7 @@ function animation() {
           toggleActions: 'play none none reverse'
         }
       })
-  
+
       gsap.from('.snacks__item', {
         opacity: 0,
         yPercent: 50,
@@ -94,7 +94,7 @@ function animation() {
           toggleActions: 'play none none reverse'
         }
       })
-  
+
       gsap.from('.drinks__item', {
         opacity: 0,
         yPercent: 50,

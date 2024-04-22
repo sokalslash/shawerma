@@ -32,7 +32,7 @@ const order = {
     this._basket.goods[productId] = Object.assign({}, productObjectWithFlagId);
     this._basket.goods[productId].count++;
   },
-  
+
   _getGoodsForMessage() {
     const orderContentArray = [];
     for (let prop in this._basket.goods) {
@@ -40,7 +40,7 @@ const order = {
     }
     return orderContentArray.join('');
   },
-  
+
   _clearBasket(callback) {
     this._clearStore();
     callback(this._basket.sumGoods, this._basket.amountGoods);

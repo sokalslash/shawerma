@@ -1,6 +1,6 @@
 const menu = {
   shawClass: {
-    shawCl1000: { //почитать про строковые ключи
+    shawCl1000: {
       name: 'Шаурма',
       type: 'Классическая',
       size: '1000гр',
@@ -29,7 +29,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawCheesb: {
     shawCheesb1000: {
       name: 'Шаурма',
@@ -60,7 +60,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawBacon: {
     shawBacon1000: {
       name: 'Шаурма',
@@ -91,7 +91,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawBarbecue: {
     shawBarbecue1000: {
       name: 'Шаурма',
@@ -122,7 +122,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawTereyake: {
     shawTereyake1000: {
       name: 'Шаурма',
@@ -153,7 +153,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawBigTeisty: {
     shawBigTeisty1000: {
       name: 'Шаурма',
@@ -184,7 +184,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawSpicy: {
     shawSpicy1000: {
       name: 'Шаурма',
@@ -215,7 +215,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawHawaiian: {
     shawHawaiian1000: {
       name: 'Шаурма',
@@ -246,7 +246,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawSummer: {
     shawSummer1000: {
       name: 'Шаурма',
@@ -277,7 +277,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawMustard: {
     shawMustard1000: {
       name: 'Шаурма',
@@ -308,7 +308,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawBavarian: {
     shawBavarian1000: {
       name: 'Шаурма',
@@ -339,7 +339,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawVillage: {
     shawVillage1000: {
       name: 'Шаурма',
@@ -370,7 +370,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   shawCheese: {
     shawCheese1000: {
       name: 'Шаурма',
@@ -401,7 +401,7 @@ const menu = {
       count: 0
     },
   },
-  
+
   burger: {
     hamburger: {
       name: 'Гамбургер',

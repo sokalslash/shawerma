@@ -4,9 +4,8 @@ import { addStickyHeader } from './view/sticky-header.js';
 
 import './view/mob-navigation.js';
 import './view/page-view.js';
-// import './view/basket-view.js';
 
-import { order } from './model/model.js'; //разобратться где вызывать
+import { order } from './model/model.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   fix100vh();
